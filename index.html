@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Forecast Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+<h1>🌦 Weather Forecast Pro</h1>
+
+<div class="search-box">
+
+<input
+type="text"
+id="city"
+placeholder="Enter City Name">
+
+<button onclick="getWeather()">
+Search
+</button>
+
+</div>
+
+<div id="currentWeather" class="card">
+
+<h2>Current Weather</h2>
+
+<div id="weatherIcon"></div>
+
+<p id="temperature"></p>
+
+<p id="condition"></p>
+
+<p id="humidity"></p>
+
+<p id="wind"></p>
+
+<p id="visibility"></p>
+
+<p id="sunrise"></p>
+
+<p id="sunset"></p>
+
+</div>
+
+<div class="forecast-container">
+
+<div class="card">
+
+<h2>Tomorrow</h2>
+
+<div id="tomorrowWeather"></div>
+
+</div>
+
+</div>
+
+<div class="card graph-card">
+
+<h2>7 Days Temperature Graph</h2>
+
+<canvas id="weatherChart"></canvas>
+
+</div>
+
+<footer>
+
+Made with ❤️ by Akshat Kumar Jha
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
