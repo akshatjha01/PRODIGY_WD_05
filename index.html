@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Weather Forecast Pro</title>
 
 <link rel="stylesheet" href="style.css">
@@ -30,10 +31,16 @@ id="city"
 placeholder="Enter City Name">
 
 <button onclick="getWeather()">
-Search
+🔍 Search
 </button>
 
 </div>
+
+<button class="location-btn" onclick="getLocation()">
+📍 Use My Location
+</button>
+
+<!-- Current Weather -->
 
 <div id="currentWeather" class="card">
 
@@ -41,9 +48,9 @@ Search
 
 <div id="weatherIcon"></div>
 
-<p id="temperature"></p>
+<h1 id="temperature">--°C</h1>
 
-<p id="condition"></p>
+<p id="condition">Weather Condition</p>
 
 <p id="humidity"></p>
 
@@ -57,21 +64,77 @@ Search
 
 </div>
 
+<!-- Extra Weather Details -->
+
+<div class="extra-details">
+
+<div class="detail-card">
+<h3>🌡 Feels Like</h3>
+<p id="feelsLike">--°C</p>
+</div>
+
+<div class="detail-card">
+<h3>💧 Humidity</h3>
+<p id="humidity2">--%</p>
+</div>
+
+<div class="detail-card">
+<h3>🌬 Wind</h3>
+<p id="wind2">-- m/s</p>
+</div>
+
+<div class="detail-card">
+<h3>📈 Pressure</h3>
+<p id="pressure">-- hPa</p>
+</div>
+
+<div class="detail-card">
+<h3>👀 Visibility</h3>
+<p id="visibility2">-- km</p>
+</div>
+
+<div class="detail-card">
+<h3>🌍 AQI</h3>
+<p id="aqi">Loading...</p>
+</div>
+
+</div>
+
+<!-- Tomorrow Forecast -->
+
 <div class="forecast-container">
 
 <div class="card">
 
-<h2>Tomorrow</h2>
+<h2>📅 Tomorrow Forecast</h2>
 
-<div id="tomorrowWeather"></div>
+<div id="tomorrowWeather">
+
+Loading...
 
 </div>
 
 </div>
+
+</div>
+
+<!-- 5 Day Forecast -->
+
+<div class="card">
+
+<h2>📆 5-Day Forecast</h2>
+
+<div id="forecastCards">
+
+</div>
+
+</div>
+
+<!-- Temperature Graph -->
 
 <div class="card graph-card">
 
-<h2>7 Days Temperature Graph</h2>
+<h2>📊 7-Day Temperature Graph</h2>
 
 <canvas id="weatherChart"></canvas>
 
@@ -79,7 +142,7 @@ Search
 
 <footer>
 
-Made with ❤️ by Akshat Kumar Jha
+Made with ❤️ by <b>Akshat Kumar Jha</b>
 
 </footer>
 
